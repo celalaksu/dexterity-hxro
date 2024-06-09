@@ -1,6 +1,13 @@
 export function formatPubKey(pubkey: string): string {
-    if (pubkey.length <= 8) return pubkey;
-    return `${pubkey.substring(0, 4)}...${pubkey.substring(pubkey.length - 4)}`;
+    console.log("PUB KEY ", pubkey)
+    // Buraya pubkey gelmiyor
+    if (pubkey != undefined) {
+        if (pubkey.length <= 8) return pubkey;
+        return `${pubkey.substring(0, 4)}...${pubkey.substring(pubkey.length - 4)}`;
+    }
+    else {
+        console.log("Pubkey yok yok ")
+    }
 }
 
 export function timeSince(timestamp: number): string {
